@@ -138,3 +138,9 @@ tail -n number file
 print the last numberth line of file
 
 generate ssh-public-key: ssh-keygen -t rsa
+
+vim multiple window switch:
+ctrl + w
+
+tar directory:
+    tar -zcvf compressFileName.tar.gz folderToCompress
