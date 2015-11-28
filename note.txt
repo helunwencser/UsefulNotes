@@ -144,3 +144,10 @@ ctrl + w
 
 tar directory:
     tar -zcvf compressFileName.tar.gz folderToCompress
+
+change computer name:
+    sudo vim /etc/hostname
+    sudo vim /etc/hosts
+
+python function parameter passing:
+    the parameter passed in as a reference, but the reference is passed by value.
