@@ -151,3 +151,7 @@ change computer name:
 
 python function parameter passing:
     the parameter passed in as a reference, but the reference is passed by value.
+
+/usr/bin/env bad interpreter: no such file or directory:
+    reinstall env file:
+        sudo apt-get install --reinstall coreutils
