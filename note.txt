@@ -158,3 +158,40 @@ python function parameter passing:
 
 show current path:
     pwd
+
+change password:
+    passwd
+
+list file in detail mode:
+    ls -l
+
+who am i:
+    whoami
+
+list login user:
+    users
+    who
+    w
+
+system shutdown:
+    halt, brings the system down immediately
+    poweroff, shut down by powering off
+    reboot, reboot
+    shutdown, shutdown
+
+meta characters:
+    * any number of characters
+    ? one character
+
+create parent directory:
+    mkdir -p
+
+remove directory:
+    rmdir name
+
+environment variable:
+    set without $
+    access with $
+
+environment variable RANDOM:
+    generate a random integer between 0 and 32,767
