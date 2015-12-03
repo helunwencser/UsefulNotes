@@ -155,3 +155,6 @@ python function parameter passing:
 /usr/bin/env bad interpreter: no such file or directory:
     reinstall env file:
         sudo apt-get install --reinstall coreutils
+
+show current path:
+    pwd
