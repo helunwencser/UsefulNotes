@@ -143,7 +143,7 @@ vim multiple window switch:
 ctrl + w
 
 tar directory:
-    tar -zxvf compressFileName.tar.gz folderToCompress
+    tar -zcvf compressFileName.tar.gz folderToCompress
 
 change computer name:
     sudo vim /etc/hostname
