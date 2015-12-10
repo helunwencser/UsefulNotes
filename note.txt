@@ -232,3 +232,45 @@ bash array:
     initializtion: array_name=(value1 ... valuen)
     access array value: ${array_name[index]}
     access all values: ${array_name[*]} or ${array_name[@]}
+
+expression:
+    val = 'expr 2 + 2': space between operator and opertan, ''
+    all the conditional expressions are put inside square braces with one spaces around them.
+
+relational operator:
+    specific to numberic values. not work for string values unless their value is numberic
+    -eq
+    -ne
+    -gt
+    -lt
+    -ge
+    -le
+    all conditional expressions are put inside square braces with one spaces around them
+
+Boolean operator:
+    ! logical negation
+    -o logical OR
+    -a logical AND
+    all logical expressions are put inside square braces with one space aroud them
+
+String operator:
+    = equal or not
+    != equal or not
+    -z if string size is zero
+    -n if string size is non-zero
+    str if str is not empty
+    all expressions are put inside square braces with one space around them
+
+File test operator:
+    -b file if file is a block special file
+    -c file if file is a character special file
+    -d file if file is a directory
+    -f file if file is an ordinary file
+    -g file if file has its set group id
+    -r file if file is readable
+    -w file if file is writable
+    -x file if file is executable
+    -s file if file has size greater than 0
+    -e file if file exists
+    all expressions are put inside square braces with one space around them
+
