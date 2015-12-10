@@ -211,3 +211,24 @@ list running process:
 
 vi string replace:
     :%s/original text/new text/g(globally)
+
+scp folder option: -r
+
+shell read only variable:
+    readonly label before variable name, e.g.: readonly name
+
+shell unset variable:
+    unset variable_name
+    this will tell the shell to remove the variable from the list of variables it tracks. Once you unset a variable, you cannot be able to access the value stored in the variable.
+
+special variables:
+    $$:the pid of current shell
+    $0: the filename of the current script
+    $n: the arguments with which a script is invoked
+    $#: the number of arguments supplied to a script
+    $?: the exit status of the previous command
+
+bash array:
+    initializtion: array_name=(value1 ... valuen)
+    access array value: ${array_name[index]}
+    access all values: ${array_name[*]} or ${array_name[@]}
