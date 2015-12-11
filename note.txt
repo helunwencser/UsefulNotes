@@ -333,3 +333,16 @@ echo -e option:
 command substitution:
     the shell performs a given set of commands and the substitutes their output in place of the output of the commands.
     syntax: `command`, here is backquote, not the single quote character
+
+Shell Quoting Mechanisms:
+    Quoting         description
+    Single quote	All special characters between these quotes lose their special meaning.
+    Double quote	Most special characters between these quotes lose their special meaning with these exceptions:
+                        $
+                        `
+                        \$
+                        \'
+                        \"
+                        \\
+    Backslash	    Any character immediately following the backslash loses its special meaning.
+    Back Quote	    Anything in between back quotes would be treated as a command and would be executed.
