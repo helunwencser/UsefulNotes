@@ -274,3 +274,62 @@ File test operator:
     -e file if file exists
     all expressions are put inside square braces with one space around them
 
+Decision making:
+    if:
+        if [ expression1 ]
+        then
+            statements
+        elif
+        then
+            statements
+        elif
+        then
+            statements
+        else
+            statements
+        fi
+
+    case...esac:
+        case word in
+            pattern1)
+                statements
+                ;;
+            pattern2)
+                statements
+                ;;
+            pattern3)
+                statements
+                ;;
+        esac
+
+Loop:
+    while loop:
+        while command
+        do
+            statements
+        done
+
+    for loop:
+        for var in word1 word2 ... wordn
+        do
+            statements
+        done
+    
+    until loop:
+        until command
+        do
+            statements
+        done
+
+    select loop:
+        select var in word1 word2 ... wordn
+        do
+            statement
+        done
+
+echo -e option:
+    enable interpretation of backslash escapes
+
+command substitution:
+    the shell performs a given set of commands and the substitutes their output in place of the output of the commands.
+    syntax: `command`, here is backquote, not the single quote character
