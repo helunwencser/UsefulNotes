@@ -346,3 +346,44 @@ Shell Quoting Mechanisms:
                         \\
     Backslash	    Any character immediately following the backslash loses its special meaning.
     Back Quote	    Anything in between back quotes would be treated as a command and would be executed.
+
+io redirection:
+    > will delete old data
+    >> will append to the end of old data
+
+here document:
+    command << delimiter
+    document
+    delimiter
+
+discard output:
+    command > /dev/null
+
+redirection commands:
+    n >& m: merge output from stream n with stream m
+    n <& m: merge input from stream n with stream m
+    0: stdin
+    1: stdout
+    2: stderr
+
+create function:
+    function_name() {
+        commands
+    }
+
+call function:
+    function_name
+
+pass parameters to function:
+    function_name p1 p2 ...
+
+use parameters in function:
+    $1 $2 ...
+
+return valus from function:
+    exit: not only terminate the function, but also terminate the whole shell process.
+    return: return code, code can be anything
+    $?: capture the return value
+
+function call from prompt:
+    you can put definitions for commonly used functions inside you .profile so that they'll be available whenever you log in and you can use them at command prompt.
