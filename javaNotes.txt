@@ -1,0 +1,10 @@
+java is compile language, java source code is compile to bytecode by compile and interpreted by jvm at running time to machine code. So it can be both compiled and interpreted language. But here the iterpretation is different from intrepreting high-level language to machine code directly.
+fragile base class problem: when an api's signature has changed to a new version, the jvm will check the new version and try to load the new version when running but not crash the program.It works with very late binding and dynamic loading with programmable class loaders.
+Late binding: offset are not calculated until load time, field and method references represented symbolically in the bytecode.
+Java environment:
+	Java2SE: JRE, JDK
+	Java2EE: Servlet Development Kit, EJB implementation
+char 16 bit unicode not 8 bit
+default values: 0 for basic types, null for others
+string: str = "val" is stored in method area;
+	str = new String("val"); is stored in the heap
