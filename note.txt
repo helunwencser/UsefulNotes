@@ -387,3 +387,7 @@ return valus from function:
 
 function call from prompt:
     you can put definitions for commonly used functions inside you .profile so that they'll be available whenever you log in and you can use them at command prompt.
+
+Force browser reload:
+	Ctrl + F5
+	up + F5
