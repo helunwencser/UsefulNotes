@@ -32,3 +32,51 @@ Object relationship:
 	Association
 	Inheritance
 	Polymorphism
+
+Encapsulation:
+	class level encapsulation
+	component level encapsulation
+
+package:
+	floders created for grouping common classes
+	protected - package level variables(accessible or usable in any class
+within a package)
+
+Exception Handling:
+	Error: cannot recover from, program will crash.
+	Exception: can recover
+		know about the exceptions and can do something about it(checked)
+			are subclasses of RuntimeException
+			try/catch clause must be used
+		new problems and do not know what to do(unchecked)
+			are subclasses of Exception
+
+Customer Exception:
+	associated error number and error message is required
+
+JNI:
+	java native interface
+
+Object Relationships:
+	Encapsulation: private data members
+	Association: passing an object by reference
+	Containment: instantiating an object inside another class
+	Inheritance: recycling the properties and methods from parent to child
+	Polymorphism: single method
+
+Inner class:
+	Inner class is not recommended.
+	Other classes can access inner class if it is defined as public.
+	Inner class can access all properties of outer class directly. But
+outer class cannot access properties of inner class directly even if it is
+public. Outer class can only access properties of inner class throug an
+instance of inner class even if properties are private.
+	Type 1:
+		An instance of outer class has to be created for creating an
+instance of inner. Inner class code acts like an instance for code access
+perspective. e.g.: Outer outer = new Outer(); Inner inncer = outer.new
+Inner();
+	Type 2:
+		Local inner class(side a method). Can only be abstract or
+final, on other modifiers are allowed. No static variables are allowed.
+	Type 3: Using an class with word static in front of it.
