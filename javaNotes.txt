@@ -79,4 +79,27 @@ Inner();
 	Type 2:
 		Local inner class(side a method). Can only be abstract or
 final, on other modifiers are allowed. No static variables are allowed.
-	Type 3: Using an class with word static in front of it.
+	Type 3: 
+		Using an class with word static in front of it. e.g.: Inner inner = new Outer.Inner();
+	Type 4:
+		Anonmymous inner class. One time inner class.
+
+Lists:
+	search: sequential or binary search(sorted)
+Hashing:
+	Set: unique list of values(unique value is stored in a key), indexing information
+	Map: unique list of sets
+Tree:
+	sorted structure
+	Red Black Tree
+
+Collections:
+	List: ArrayList and LinkedList
+
+	Set: HashSet(unsorted) and TreeSet(sorted)
+
+	Map: HashMap(unsorted) and TreeMap(sorted)
+
+	LinkedHashSet: LinkedList and HashSet
+
+	LinkedHashMap: LinkedList and HashMap
