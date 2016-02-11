@@ -103,3 +103,16 @@ Collections:
 	LinkedHashSet: LinkedList and HashSet
 
 	LinkedHashMap: LinkedList and HashMap
+
+JVM, SystemThreadGroup Library:
+	Thread is instantiated, pass a reference to the os.
+	Process: instructions, memory, state of registers and pc.
+	Memory: cs, ds, stack and heap.
+	State of process or context: memory, register and value of pc.
+	Context switching: refers to one processor switching from one process to another.
+
+
+Non-preemptive: once CPU gives attention to the process, it must complete the allocated block of time.
+Pre-emptive: If CPU has given attention to the process, it doesn't have to complete the allocated block of time, if the next process of higher priority comes into picture.
+
+The JVM and Packages are thread safe and re-entrant.
