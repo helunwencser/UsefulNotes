@@ -116,3 +116,10 @@ Non-preemptive: once CPU gives attention to the process, it must complete the al
 Pre-emptive: If CPU has given attention to the process, it doesn't have to complete the allocated block of time, if the next process of higher priority comes into picture.
 
 The JVM and Packages are thread safe and re-entrant.
+
+run() is called by operating system.
+
+Create a thread:
+	extends Thread: thread.start().
+	implements Runnable: thread.run().
+
