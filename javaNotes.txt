@@ -121,5 +121,8 @@ run() is called by operating system.
 
 Create a thread:
 	extends Thread: thread.start().
-	implements Runnable: thread.run().
+	implements Runnable: thread.start().
+
+Set priority of thread in java:
+	.setPriority(Thread.NORM_PRIORITY).
 
