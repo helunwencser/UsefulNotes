@@ -126,3 +126,8 @@ Create a thread:
 Set priority of thread in java:
 	.setPriority(Thread.NORM_PRIORITY).
 
+Enable communication between threads:
+	wait(), notify(), notifyAll(), create dependency between threads so a thread can complete a task and another thread can start.
+	join(), enable wait in one thread while other threads finish.
+
+Thread communication with synchronization - share resources and locking.
