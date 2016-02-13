@@ -131,3 +131,5 @@ Enable communication between threads:
 	join(), enable wait in one thread while other threads finish.
 
 Thread communication with synchronization - share resources and locking.
+
+isAlive(): if thread is alive
