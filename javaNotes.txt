@@ -133,3 +133,19 @@ Enable communication between threads:
 Thread communication with synchronization - share resources and locking.
 
 isAlive(): if thread is alive
+
+Socket:
+	IP Address + port number
+	(Machine + Process) --> Socket(associtate streams)
+
+java.net Package
+	Inetaddress:
+		wrapper around IP address - v4, v6, and v8 address.
+		cannot write IP address to a machine
+		can read a value only
+	ServerSocket:
+		creating a multithreaded server.
+	Socket:
+		client
+	URL:
+		emulating a client to WS(browser)
