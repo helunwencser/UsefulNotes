@@ -155,3 +155,32 @@ Sockets:
 	public Socket(InetAddress address, int port, InetAddress localAddr, int localPort);
 	public Socket(String host, int port);
 	publci Socket(String host, int port, InetAddress localAddr, int localPort);
+
+Socket Options:
+	SO_LINGER:
+		send large chunks of data and force the connection to maintain.
+	SO_TIMEOUT:
+		how long should the socket remain live when there is no activity.
+	TCP_NODELAY:
+		setting a small delay for small packet.
+		Nagles Algorith:
+			setting windowsize number
+			when sending a lot of packets, limit the window size
+			client transmitting:
+				transmit 10(each one is labeled) 1 of 10, 2 of 10 etc.
+			server receiving:
+				arrive in any random order
+				length of time server should wait for client to retransmit.
+			receiving [1, 3, 5, 7, 8, 9, 10]: send request to retransmit missing packets 2, 4, 6 before collating next window.
+
+ServerSockets:
+	public ServerSocket(int port);
+	public ServerSocket(int port, int backlog);
+		backlog: the number of requests that can stay in the queue for the server to response to.
+	public ServerSocket(int port, int backlog, InetAddress binAddr);
+		binAddr: which ip address to use for the socket, because a server may have multiple ip addresses.
+
+Multithreading implementation:
+	Create a server:
+		a.extending Thread in ServerSocket
+		b.extending Thread in Socket object returned by accept() method(recommended).
