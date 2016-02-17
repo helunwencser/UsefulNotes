@@ -140,9 +140,9 @@ Socket:
 
 java.net Package
 	Inetaddress:
-		wrapper around IP address - v4, v6, and v8 address.
-		cannot write IP address to a machine
-		can read a value only
+		wrapper around IP address - v4, v6, and v8 addresses.
+		cannot write IP address to a machine.
+		can read a value only.
 	ServerSocket:
 		creating a multithreaded server.
 	Socket:
@@ -150,4 +150,8 @@ java.net Package
 	URL:
 		emulating a client to WS(browser)
 
-
+Sockets:
+	public Socket(InetAddress address, int port);
+	public Socket(InetAddress address, int port, InetAddress localAddr, int localPort);
+	public Socket(String host, int port);
+	publci Socket(String host, int port, InetAddress localAddr, int localPort);
