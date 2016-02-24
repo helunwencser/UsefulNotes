@@ -187,3 +187,6 @@ Multithreading implementation:
 
 TCP relability:
 	During the transmission of packets using TCP connection, if the packet loss over a connection passes some limit or the network connecting a pair of communicating processes is servered or becomes serverely congested, the TCP software responsible for sending messages will receive no acknowledgement and after a time will declare the connection to be broken. Thus TCP does not provide reliable communication, because it does not guarantee to deliver messages in the face of all possible difficulties.
+
+Java UDP API:
+	DatagramSocket, DatagramPacket
