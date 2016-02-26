@@ -417,3 +417,9 @@ If this file does not exists, then the above command will create it. Make sure y
 Note that ssh by default does not allow root to log in. This has to be explicitly enabled on host_dest. This can be done by editing /etc/ssh/sshd_config and changing the option of PermitRootLogin from no to yes. Don't forget to restart sshd so that it reads the modified config file. Do this only if you want to use the root login.
 
 Well, thats it. Now you can run scp, ssh and rsync on host_src connecting to host_dest and it won't prompt for the password. Note that this will still prompt for the password if you are running the commands on host_dest connecting to host_src. You can reverse the steps above (generate the public key on host_dest and copy it to host_src) and you have a two way setup ready!
+
+delete file with extension recursively:
+    find . -type f -name '*.class' -delete
+    
+Indexing:
+    Indexing process is similar to indexes in the end of a book where common workds are shown with their page numbers so that these words can be tracked quickly instead of searching the compete book.
