@@ -1,10 +1,192 @@
 java is compile language, java source code is compile to bytecode by compile and interpreted by jvm at running time to machine code. So it can be both compiled and interpreted language. But here the iterpretation is different from intrepreting high-level language to machine code directly.
+
 fragile base class problem: when an api's signature has changed to a new version, the jvm will check the new version and try to load the new version when running but not crash the program.It works with very late binding and dynamic loading with programmable class loaders.
+
 Late binding: offset are not calculated until load time, field and method references represented symbolically in the bytecode.
+
 Java environment:
 	Java2SE: JRE, JDK
 	Java2EE: Servlet Development Kit, EJB implementation
+
 char 16 bit unicode not 8 bit
+
 default values: 0 for basic types, null for others
+
 string: str = "val" is stored in method area;
 	str = new String("val"); is stored in the heap
+
+add no arg constructor to initialize all properties.
+
+private: useable in class
+protected: usable in package or with inheritance
+public: useable everywhere
+
+printf available in System.out.printf with same format as in C.
+
+composition - strong association
+	    - weak associtation: passing an object by reference in a method
+
+Object relationship:
+	Encapsulation - making data in a class private
+	Containment 
+	Association
+	Inheritance
+	Polymorphism
+
+Encapsulation:
+	class level encapsulation
+	component level encapsulation
+
+package:
+	floders created for grouping common classes
+	protected - package level variables(accessible or usable in any class
+within a package)
+
+Exception Handling:
+	Error: cannot recover from, program will crash.
+	Exception: can recover
+		know about the exceptions and can do something about it(checked)
+			are subclasses of RuntimeException
+			try/catch clause must be used
+		new problems and do not know what to do(unchecked)
+			are subclasses of Exception
+
+Customer Exception:
+	associated error number and error message is required
+
+JNI:
+	java native interface
+
+Object Relationships:
+	Encapsulation: private data members
+	Association: passing an object by reference
+	Containment: instantiating an object inside another class
+	Inheritance: recycling the properties and methods from parent to child
+	Polymorphism: single method
+
+Inner class:
+	Inner class is not recommended.
+	Other classes can access inner class if it is defined as public.
+	Inner class can access all properties of outer class directly. But
+outer class cannot access properties of inner class directly even if it is
+public. Outer class can only access properties of inner class throug an
+instance of inner class even if properties are private.
+	Type 1:
+		An instance of outer class has to be created for creating an
+instance of inner. Inner class code acts like an instance for code access
+perspective. e.g.: Outer outer = new Outer(); Inner inncer = outer.new
+Inner();
+	Type 2:
+		Local inner class(side a method). Can only be abstract or
+final, on other modifiers are allowed. No static variables are allowed.
+	Type 3: 
+		Using an class with word static in front of it. e.g.: Inner inner = new Outer.Inner();
+	Type 4:
+		Anonmymous inner class. One time inner class.
+
+Lists:
+	search: sequential or binary search(sorted)
+Hashing:
+	Set: unique list of values(unique value is stored in a key), indexing information
+	Map: unique list of sets
+Tree:
+	sorted structure
+	Red Black Tree
+
+Collections:
+	List: ArrayList and LinkedList
+
+	Set: HashSet(unsorted) and TreeSet(sorted)
+
+	Map: HashMap(unsorted) and TreeMap(sorted)
+
+	LinkedHashSet: LinkedList and HashSet
+
+	LinkedHashMap: LinkedList and HashMap
+
+JVM, SystemThreadGroup Library:
+	Thread is instantiated, pass a reference to the os.
+	Process: instructions, memory, state of registers and pc.
+	Memory: cs, ds, stack and heap.
+	State of process or context: memory, register and value of pc.
+	Context switching: refers to one processor switching from one process to another.
+
+
+Non-preemptive: once CPU gives attention to the process, it must complete the allocated block of time.
+Pre-emptive: If CPU has given attention to the process, it doesn't have to complete the allocated block of time, if the next process of higher priority comes into picture.
+
+The JVM and Packages are thread safe and re-entrant.
+
+run() is called by operating system.
+
+Create a thread:
+	extends Thread: thread.start().
+	implements Runnable: thread.start().
+
+Set priority of thread in java:
+	.setPriority(Thread.NORM_PRIORITY).
+
+Enable communication between threads:
+	wait(), notify(), notifyAll(), create dependency between threads so a thread can complete a task and another thread can start.
+	join(), enable wait in one thread while other threads finish.
+
+Thread communication with synchronization - share resources and locking.
+
+isAlive(): if thread is alive
+
+Socket:
+	IP Address + port number
+	(Machine + Process) --> Socket(associtate streams)
+
+java.net Package
+	Inetaddress:
+		wrapper around IP address - v4, v6, and v8 addresses.
+		cannot write IP address to a machine.
+		can read a value only.
+	ServerSocket:
+		creating a multithreaded server.
+	Socket:
+		client
+	URL:
+		emulating a client to WS(browser)
+
+Sockets:
+	public Socket(InetAddress address, int port);
+	public Socket(InetAddress address, int port, InetAddress localAddr, int localPort);
+	public Socket(String host, int port);
+	publci Socket(String host, int port, InetAddress localAddr, int localPort);
+
+Socket Options:
+	SO_LINGER:
+		send large chunks of data and force the connection to maintain.
+	SO_TIMEOUT:
+		how long should the socket remain live when there is no activity.
+	TCP_NODELAY:
+		setting a small delay for small packet.
+		Nagles Algorith:
+			setting windowsize number
+			when sending a lot of packets, limit the window size
+			client transmitting:
+				transmit 10(each one is labeled) 1 of 10, 2 of 10 etc.
+			server receiving:
+				arrive in any random order
+				length of time server should wait for client to retransmit.
+			receiving [1, 3, 5, 7, 8, 9, 10]: send request to retransmit missing packets 2, 4, 6 before collating next window.
+
+ServerSockets:
+	public ServerSocket(int port);
+	public ServerSocket(int port, int backlog);
+		backlog: the number of requests that can stay in the queue for the server to response to.
+	public ServerSocket(int port, int backlog, InetAddress binAddr);
+		binAddr: which ip address to use for the socket, because a server may have multiple ip addresses.
+
+Multithreading implementation:
+	Create a server:
+		a.extending Thread in ServerSocket
+		b.extending Thread in Socket object returned by accept() method(recommended).
+
+TCP relability:
+	During the transmission of packets using TCP connection, if the packet loss over a connection passes some limit or the network connecting a pair of communicating processes is servered or becomes serverely congested, the TCP software responsible for sending messages will receive no acknowledgement and after a time will declare the connection to be broken. Thus TCP does not provide reliable communication, because it does not guarantee to deliver messages in the face of all possible difficulties.
+
+Java UDP API:
+	DatagramSocket, DatagramPacket

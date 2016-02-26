@@ -388,6 +388,9 @@ return valus from function:
 function call from prompt:
     you can put definitions for commonly used functions inside you .profile so that they'll be available whenever you log in and you can use them at command prompt.
 
+Force browser reload:
+	Ctrl + F5
+	up + F5
 
 How To scp, ssh and rsync without prompting for password
 By jkini on Oct 17, 2007
@@ -423,3 +426,8 @@ delete file with extension recursively:
     
 Indexing:
     Indexing process is similar to indexes in the end of a book where common workds are shown with their page numbers so that these words can be tracked quickly instead of searching the compete book.
+
+Implement hash table with a binary search tree. We can then guarantee an O(log n) lookup time, since we can keep the tree balanced. Additionally, we may use less space, since a large array no longer needs to be allocated in the very beginning.
+
+ArrayList(Dynamically Resizing Array):
+	when the array is full, the array double in size. Each double takes O(n) time, but happens so rarely that its amortized time is still O(1).
