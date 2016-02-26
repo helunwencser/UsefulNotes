@@ -431,3 +431,5 @@ Implement hash table with a binary search tree. We can then guarantee an O(log n
 
 ArrayList(Dynamically Resizing Array):
 	when the array is full, the array double in size. Each double takes O(n) time, but happens so rarely that its amortized time is still O(1).
+
+Tokenization: in lexical analysis, tokenization is the process of breaking a stream of text up into words, phrases, symbols, or other meaningful elements called tokens. The list of tokens becomes input for further processing such as parsing or text mining. Tokenization is useful both in linguistics and in computer science, where it forms part of lexical analysis.
