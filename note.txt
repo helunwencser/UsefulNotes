@@ -466,3 +466,6 @@ SED notes:
         d: delete command, delete command removes lines only from the pattern buffer. The lines is not sent to the output stream and the original file remains unchanged.
         w: write command, [address1 [, address2]]w file, file is file to store the contents. For example: sed -n 'w copy.txt' file.txt will copy file.txt to a file named copy.txt.
         a: append command, [address] a append text, for example: sed '4 a txt' file, 4 implies the line number, a is the append command, and the remaining part is the text to be appended. If textual pattern is used as address, then the text is appended after each match.
+	c: change or replace command. [address [, address] ] c replace text, This command helps replace an existing line with new text. When line range is provided, all the lines are replaced as a group by a single text line.
+	i: insert command. [address] i insert text, inserts a line before a specific position.
+	y: translate command. [adress1[, adress2]]y/list-1/list-2/, transforms the characters by position.
