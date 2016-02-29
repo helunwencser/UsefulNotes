@@ -433,3 +433,13 @@ ArrayList(Dynamically Resizing Array):
 	when the array is full, the array double in size. Each double takes O(n) time, but happens so rarely that its amortized time is still O(1).
 
 Tokenization: in lexical analysis, tokenization is the process of breaking a stream of text up into words, phrases, symbols, or other meaningful elements called tokens. The list of tokens becomes input for further processing such as parsing or text mining. Tokenization is useful both in linguistics and in computer science, where it forms part of lexical analysis.
+
+whereis:
+    locate the binary, source, and manual page files for a command.
+
+which:
+    returns the pathnames of the files(or links) which could be executed in the current environment, had its arguments been given as commands in a strictly POSIX-cooformant shell.
+
+
+SED:
+    sed means stream editor, it is a simple yet powerful utility that parses the text and transforms it seamlessly.
