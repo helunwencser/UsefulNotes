@@ -443,3 +443,26 @@ which:
 
 SED:
     sed means stream editor, it is a simple yet powerful utility that parses the text and transforms it seamlessly.
+
+SED workflow:
+    a. Read: read a line from input stream(file, pipe, stdin).
+    b. Execute: execute sed command(s) on a line.
+    c. Display: display result on output stream.
+
+SED notes:
+    if address range is not provided by default, then SED operates on each line. For example: sed '' file command will print all contents in file.
+    sed can be invoked in the following two forms:
+        sed [-n] [-e] 'command(s)' files
+        sed [-n] -f scriptfile files
+    sed standard options:
+        -n: default printing of pattern buffer, do not print any thing in pattern buffer.
+        -e: next argument is an editing command.
+        -f: next argument is a file containing editing commands.
+    sed commands:
+        p: print
+            by default, sed operates on all lines. But we can force SED to operate only on certain lines. For example: sed -n '3p' file will print the 3ed line of the file, sed -n '2, 5 p' file will print all the lines from 2 to 5, sed -n '$ p' file will print the last line in the file. We can not only specify address range using the comma(,) operator, we can also use the plus(+) operator to specify address range. For example, sed -n '2, +4' file will print 4 lines starting from line 2. We can also specify address range using the tilde(~) operator. It uses M~n form. It indicates that SED should start at line number M and process every n line. For instance, 50~5 matches line number 50, 55, 60, and so on.
+        pattern range:
+            a pattern range can be a simple text or a complex regular expression. For example, sed -n '/Paulo/ p' file will print all lines which contain "Paulo". We can also combine a pattern range with an address range. For example, sed -n '/Paulo/, 5 p' file will print lines starting with the first match of "Paulo" until the fifth line. We can also specify more than one pattern ranges using the comma(,) operator. For example, sed -n '/one/, 'two' p' file will print all lines which match either "one" or "two" or both. Additionally, we can use the plus(+) operator within a pattern range. For example, sed -n '/Two/, +4 p' file will print the first occurrence of the pattern and the next 4 lines after that.
+        d: delete command, delete command removes lines only from the pattern buffer. The lines is not sent to the output stream and the original file remains unchanged.
+        w: write command, [address1 [, address2]]w file, file is file to store the contents. For example: sed -n 'w copy.txt' file.txt will copy file.txt to a file named copy.txt.
+        a: append command, [address] a append text, for example: sed '4 a txt' file, 4 implies the line number, a is the append command, and the remaining part is the text to be appended. If textual pattern is used as address, then the text is appended after each match.
