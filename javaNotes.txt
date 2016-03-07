@@ -202,3 +202,16 @@ Rules of normalization:
 	1. no repeating fields.
 	2. create a primary key and use this for referring to data in other tables.
 	3. no interdependency between columns.
+
+IS NULL operator
+= NULL will not work for null cells.
+|| string concatenate operator:
+	select ename || ', ' || empno "Emp Name, ID"
+	from emp
+	where sal > 4000;
+% is used for matching all characters, _ is used for matching one character.
+ESCAPE option:
+	select dname
+	from dept
+	where dname like '%\_%' escape '\';
+	here \ is used as escape character, we can choose any character as the escape character.
