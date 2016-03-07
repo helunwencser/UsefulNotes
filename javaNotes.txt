@@ -215,3 +215,18 @@ ESCAPE option:
 	from dept
 	where dname like '%\_%' escape '\';
 	here \ is used as escape character, we can choose any character as the escape character.
+
+SQL> rollback (rollback the last sql statement)
+
+SQL> savpoint update_done; (create save point)
+...
+SQL> rollback update_done; (roll back to save point)
+
+To make change permanent, commit statement is given.
+SQL> commit;
+
+Locking mechanism:
+	All locks acquired by statements within a transaction are held for the duration of the transaction. DB releases all locks acquired by the statements within a transaction, when an explicit commit or rollback is executed.
+	DB lock modes:
+		Exclusive lock mode: write
+		Share lock mode: read
