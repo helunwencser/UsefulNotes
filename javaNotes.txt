@@ -190,3 +190,15 @@ TCP relability:
 
 Java UDP API:
 	DatagramSocket, DatagramPacket
+
+Referential Integrity.
+
+Primary key: ensure each row has a unique value.
+Foreign key: referencing a primary in another table.
+
+Normalization: minimize redundant and inconsistent data and avoid update anomlies.
+
+Rules of normalization:
+	1. no repeating fields.
+	2. create a primary key and use this for referring to data in other tables.
+	3. no interdependency between columns.
