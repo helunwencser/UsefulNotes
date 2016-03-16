@@ -1141,3 +1141,29 @@ public class Solution {
 		return set;
 	}
 }
+
+public class Solution {
+	public void paintFill(int[][] grid, int x, int y, int origionalColor) {
+		if(x < 0 || x >= grid.length || y < 0 || y >= grid[0].length || grid[x][y] != origionalColor) {
+			return;
+		}
+		grid[x][y] = -1;
+		paintFill(grid, x - 1, y, origionalColor);
+		paintFill(grid, x + 1, y, origionalColor);
+		paintFill(grid, x, y - 1, origionalColor);
+		paintFill(grid, x, y + 1, origionalColor);
+	}
+	public void paintFill(int[][] grid, int x, int y, int color) {
+		if(grid == null || x < 0 || x >= grid.length || y < 0 || y >= grid[0].length) {
+			return;
+		}
+		paintFill(grid, x, y, grid[x][y]);
+		for(int i = 0; i < grid.length; i++) {
+			for(int j = 0; j < grid[i].length; j++) {
+				if(grid[x][y] == -1) {
+					grid[x][y] = color;
+				}
+			}
+		}
+	}
+}
