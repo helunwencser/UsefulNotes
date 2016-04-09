@@ -17,3 +17,5 @@ temporary space(saved but not committed): git stash
 view a list of stashed changes: git stash list
 
 temporary space(saved but not committed): git stash
+
+move file: git mv file dir
