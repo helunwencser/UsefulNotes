@@ -1167,3 +1167,13 @@ public class Solution {
 		}
 	}
 }
+
+public class Solution {
+	public int numOfWays(int n) {
+		if(n < 5) {
+			return 1;
+		} else if(n < 10) {
+			return 2;
+		} 
+	}
+}
