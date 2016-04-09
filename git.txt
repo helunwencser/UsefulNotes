@@ -6,10 +6,14 @@ see commit log: git log
 
 add remote repository: git remote add origin username@gih.ser.com:project.git
 
-view the commit details: git show cimmit ID
+view the commit details: git show commit ID
 
 view differences: git diff
 
 correct the last commit: git commit -amend -m "message"
 
-back on stashed work: git stash pop
+temporary space(saved but not committed): git stash
+
+view a list of stashed changes: git stash list
+
+temporary space(saved but not committed): git stash
