@@ -11,3 +11,5 @@ view the commit details: git show cimmit ID
 view differences: git diff
 
 correct the last commit: git commit -amend -m "message"
+
+back on stashed work: git stash pop
