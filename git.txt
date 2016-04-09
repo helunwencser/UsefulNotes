@@ -1,3 +1,9 @@
 Git is a distributed version control system
 
-staging area: git only track files in staging area
+staging area: git only track files in staging area.
+
+see commit log: git log
+
+add remote repository: git remote add origin username@gih.ser.com:project.git
+
+view the commit details: git show cimmit ID
